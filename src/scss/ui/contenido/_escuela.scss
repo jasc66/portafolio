@@ -1,0 +1,125 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.escuela {
+   // @include m.bgImage('../img/img34.jpg');
+    padding: 10rem 0;
+    text-align: center;
+    color: v.$vintage;
+
+    &__heading {
+        font-weight: 700;
+    }
+    &__texto {
+        font-size: 2.6rem;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    &__enlace {
+        @include m.boton(v.$primario, v.$blanco);
+    }
+    h3 {
+        padding-top: 1px;
+    }
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+
+    border-collapse: collapse;
+    border: 3px solid v.$vintage;
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 35%;
+  }
+  
+  th, td {
+    padding: 20px;
+  }
+
+  thead, tfoot {
+    
+    color: v.$vintage;
+    text-shadow: 1px 1px 1px v.$blanco;
+  }
+  
+  thead th, tfoot th, tfoot td {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(34, 32, 32, 0.5));
+    border: 3px solid v.$paleta3;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: v.$paleta;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: v.$paleta;
+  }
+  
+
+  table {
+    background-color: v.$vintage3;
+  }
+
+  caption {
+    font-family: 'Rock Salt', cursive;
+    padding: 20px;
+    font-style: italic;
+    caption-side: bottom;
+    color: #666;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  .titulos {
+    padding-top: 5rem;
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+        }
+    }
+
+    &__widget {
+       text-align: center;
+
+       &:nth-child(3) {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+    }
+    &__heading {
+        @include m.heading;
+        font-size: 3.4rem;
+    }
+    &__texto {
+        line-height: 1.8;
+    }
+
+    &__copyright {
+        text-align: center;
+        max-width: 120rem;
+        margin: 2rem auto 0 auto;
+        border-top: 1px solid darken(v.$naranja, 10%);
+        font-size: 1.6rem;
+        padding: 2rem;
+        color: v.$gris;
+
+    }
+}
+
+

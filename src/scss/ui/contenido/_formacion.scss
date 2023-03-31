@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cursos {
+    padding: 5rem 0;
+    h3 {
+        text-align: center;
+        color: v.$negro;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor-cursos {
+
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+        }
+    }
+}
+
+.curso {
+    color: black;
+
+
+    .nombre-curso {
+        text-align: center;
+        font-size: 2.8rem;
+        color: v.$negro;
+    }
+    &-titulo,
+    &-footer  {
+        padding: .5rem;
+        p {
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+
+    &-titulo {
+        background-color: v.$paleta1;
+        p {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+    }
+    &-body {
+        background-color: v.$blanco;
+
+        ul {
+            
+            li, 
+            :nth-child(odd) {
+                background-color: v.$blanco;
+                padding: 1rem;
+                border-bottom: 1px solid #e1e1e1;
+                text-align: center;
+                font-weight: bold;
+            
+            }
+
+        }
+        p {
+            text-align: center;
+            color: v.$vintage2;
+            margin: 0;
+        }
+        
+    }
+    &-footer {
+        background-color: v.$blanco;
+        p {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
+}
